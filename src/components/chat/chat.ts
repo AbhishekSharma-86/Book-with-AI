@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { ChatService, Message } from './chat.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Openai } from './openai'
+import { Message, Openai } from './openai'
 
 @Component({
   selector: 'app-chat',

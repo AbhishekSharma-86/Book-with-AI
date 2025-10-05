@@ -2,7 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../env';
-
+export class Message {
+  constructor(public author: string, public content: string) {}
+}
 @Injectable({
   providedIn: 'root'
 })
