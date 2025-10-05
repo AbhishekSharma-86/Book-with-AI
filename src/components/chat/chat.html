@@ -1,0 +1,15 @@
+<div class="chat-container">
+  <div class="messages-container">
+    <ng-container *ngFor="let message of messages">
+      <div class="message" [ngClass]="{ 'from': message.author === 'bot', 'to': message.author === 'user' }">
+        {{ message.content }}
+      </div>
+    </ng-container>
+    <label *ngIf="messages.length == 0" for="nameField"></label>
+  </div>
+
+  <form class="message-input-container">
+    <input class="form-control" (keyup.enter)="sendMessage($event)" type="text">
+    <!-- <button type="submit" class="btn btn-primary ms-1 submit-btn" (click)="sendMessage()">Send</button> -->
+  </form>
+</div>
